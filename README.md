@@ -20,7 +20,7 @@
 
 - My Sql File Link (you can also find it into the project folder) [Link](https://drive.google.com/file/d/1hvkLjODuEDV7EymKDLT1A6C4tR_gplNT/view?usp=sharing).
 
-## MySql File
+## Project File
 
 - Project File Link [Link](https://drive.google.com/file/d/1vRHpCdSouPshx3HO0g0csu4iR2_hv-Mq/view?usp=sharing).
 
