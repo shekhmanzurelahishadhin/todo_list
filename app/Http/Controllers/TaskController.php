@@ -41,10 +41,12 @@ class TaskController extends Controller
     public function update(Request $request, $id)
     {
 
+
         $tasks = Task::where('todo_id',$id)->get();
         foreach ($tasks as $task){
             $task->delete();
         }
+
         Task::updateTask($request,$id);
         toastr()->success('Task info updated Successfully');
         return redirect()->route('task.manage');

@@ -51,8 +51,6 @@ Route::middleware([
     Route::get('/profile-settings', [ProfileController::class, 'index'])->name('profile.settings');
     Route::post('/profile-update', [ProfileController::class, 'profile_update'])->name('profile.update');
     Route::post('/password-update', [ProfileController::class, 'update_password'])->name('password.update');
-
-
 //    profile settings end
 
 });

@@ -28,6 +28,18 @@ class Task extends Model
     public static function updateTask($request, $id)
     {
 
+        foreach ($request->ids as $id) {
+            if($id != null){
+                self::$data = new Task();
+                self::$data->user_id = Auth::user()->id;
+                self::$data->todo_id = $request->todo_id;
+                self::$data->name = $id['tasks'];
+                self::$data->status = $id['status'];
+                self::$data->save();
+            }
+        }
+
+
         foreach ($request->tasks as $task) {
             if($task != null){
                 self::$data = new Task();

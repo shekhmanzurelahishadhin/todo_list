@@ -42,9 +42,12 @@
                                             @if($option != null)
                                                 <div class="col-12 delete-dynamic-location">
                                                     <div class="row">
+{{--                                                        <input type="hidden" name="id[]" value="{{$option->id}}">--}}
                                                         <div class="col-md-11 mt-2">
-                                                            <input type="text" class="form-control" name="tasks[]"
+                                                            <input type="text" class="form-control" name="ids[{{$option->id}}][tasks]"
                                                                    value="{{$option->name}}" id="inputFeature">
+                                                            <input type="hidden" class="form-control" name="ids[{{$option->id}}][status]"
+                                                                   value="{{$option->status}}" id="inputFeature">
                                                         </div>
                                                         @if($key == 0)
                                                             <div class="col-md-1 mt-2">
