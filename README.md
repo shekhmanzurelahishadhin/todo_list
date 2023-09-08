@@ -12,16 +12,17 @@
 7.	If a user deletes any To-do List, the List of Tasks associated with that To-do will also be deleted.
 8.	The user can manage the user profile by updating the image, name, and email.
 9.	The user can update the password.
+10. I have used Laravel version 10 and PHP version 8.2.0 in this application.
 
 
 
 
 ## MySql File
 
-- My Sql File Link (you can also find it into the project folder) [Link](https://drive.google.com/file/d/1hvkLjODuEDV7EymKDLT1A6C4tR_gplNT/view?usp=sharing).
+- My Sql File Link (you can also find it into the project folder) [Link](https://drive.google.com/file/d/1FGoRCyfvlJnkOm6wkHIhRGOVIVYgWrmX/view?usp=sharing).
 
 ## Project File
 
-- Project File Link [Link](https://drive.google.com/file/d/1vRHpCdSouPshx3HO0g0csu4iR2_hv-Mq/view?usp=sharing).
+- Project File Link [Link](https://drive.google.com/file/d/1iQV1vZfrGPDB72NLA7smALoC27Gxz3zY/view?usp=sharing).
 
 

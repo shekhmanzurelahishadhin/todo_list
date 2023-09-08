@@ -28,6 +28,7 @@ class Task extends Model
     public static function updateTask($request, $id)
     {
 
+//      update previous task with status
         foreach ($request->ids as $id) {
             if($id != null){
                 self::$data = new Task();
@@ -39,7 +40,7 @@ class Task extends Model
             }
         }
 
-
+//      update new added task
         foreach ($request->tasks as $task) {
             if($task != null){
                 self::$data = new Task();

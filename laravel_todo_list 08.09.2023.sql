@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2023 at 08:56 AM
+-- Generation Time: Sep 08, 2023 at 09:03 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -114,7 +114,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('XoGMsmazx5oiOvxFigvePGiYyFXfPoMQJHSbvHUK', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoicUdKSFRYR3BJWmFDYzdhMXNxVndRNWVzY0Q3M0YweGxTd0podVJQaSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozMzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3Rhc2stbWFuYWdlIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NDtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCROc3ZvN0hpcy9ORGNwc0J0dVlPYXYuT0liTDlWYjFYNXVLWkFMSFlzR3dHekdxdG5pOGs4cSI7fQ==', 1694156022);
+('aPnhch46yyez9HKsxXlEqPthDFyDqkbrqGJFuTr0', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiNENIcEpia3oyNWlkcm4zam5oNDdWYm1Eb1hWNjBnMGFHUTE2cjBURiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxODoiZmxhc2hlcjo6ZW52ZWxvcGVzIjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozMzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3Rhc2stbWFuYWdlIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRtMXdlNkxoTmdmLjRxeTZWdXFwQXkueWF4M3pIUVRMOUZ1YWlWdTB0L01QL01ZNnljUjVzTyI7fQ==', 1694199132);
 
 -- --------------------------------------------------------
 
@@ -137,14 +137,18 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `user_id`, `name`, `todo_id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'The Flash', 2, 0, '2023-09-07 12:49:32', '2023-09-07 12:49:32'),
-(2, 1, 'The Last Voyage', 2, 0, '2023-09-07 12:49:32', '2023-09-07 12:49:32'),
-(3, 1, 'Oppenheimer', 2, 1, '2023-09-07 12:49:32', '2023-09-07 12:52:26'),
-(4, 2, 'Aquaman', 1, 1, '2023-09-07 12:50:36', '2023-09-08 13:45:43'),
-(5, 2, 'The Flash', 1, 0, '2023-09-07 12:50:36', '2023-09-07 12:50:36'),
 (16, 4, 'Cricket', 4, 0, '2023-09-08 13:49:40', '2023-09-08 13:49:40'),
 (17, 4, 'Basketball', 4, 0, '2023-09-08 13:49:40', '2023-09-08 13:49:40'),
-(18, 4, 'Cricket', 4, 1, '2023-09-08 13:49:40', '2023-09-08 13:52:38');
+(18, 4, 'Cricket', 4, 1, '2023-09-08 13:49:40', '2023-09-08 13:52:38'),
+(40, 2, 'Marvel', 1, 1, '2023-09-09 01:46:28', '2023-09-09 01:46:28'),
+(41, 2, 'Spider Man', 1, 0, '2023-09-09 01:46:28', '2023-09-09 01:46:28'),
+(42, 2, 'Aquaman', 1, 1, '2023-09-09 01:46:28', '2023-09-09 01:46:28'),
+(43, 2, 'Openheimer', 1, 0, '2023-09-09 01:46:28', '2023-09-09 01:46:28'),
+(46, 1, 'The Flash', 2, 1, '2023-09-09 01:49:40', '2023-09-09 01:49:40'),
+(47, 1, 'The Last Voyage', 2, 0, '2023-09-09 01:49:40', '2023-09-09 01:49:40'),
+(48, 1, 'Oppenheimer', 2, 1, '2023-09-09 01:49:40', '2023-09-09 01:49:40'),
+(49, 1, 'Marvel', 2, 0, '2023-09-09 01:49:40', '2023-09-09 01:49:40'),
+(50, 1, 'Thor', 2, 0, '2023-09-09 01:49:41', '2023-09-09 01:49:41');
 
 -- --------------------------------------------------------
 
@@ -286,13 +290,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `todos`
 --
 ALTER TABLE `todos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
