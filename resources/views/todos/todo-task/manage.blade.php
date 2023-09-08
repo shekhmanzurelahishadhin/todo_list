@@ -34,7 +34,7 @@
                                 <td>
                                     @php $j=1; @endphp
                                     @foreach($todo->tasks as $key=>$task)
-                                        <p>{{$j++}}.&nbsp;<span class="{{$task->status == 1?'text-success':''}}">{{$task->name}}</span> &nbsp; @if($task->status == 0) <a href="{{route('task.complete',['id'=>$task->id])}}" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as Complete"><i class="bi bi-check2-circle"></i></a> @else <i class="bi bi-check2-all text-success" style="font-size: 20px" data-bs-toggle="tooltip" data-bs-placement="top" title="Completed"></i> @endif </p>
+                                        <p class="">{{$j++}}.&nbsp;<span class="{{$task->status == 1?'text-success':''}}">{{$task->name}}</span> &nbsp; @if($task->status == 0) <a href="{{route('task.complete',['id'=>$task->id])}}" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Mark as Complete"><i class="bi bi-check2-circle"></i></a> @else <i class="bi bi-check2-all text-success" style="font-size: 20px" data-bs-toggle="tooltip" data-bs-placement="top" title="Completed"></i> @endif </p>
                                     @endforeach
                                 </td>
                                 <td>

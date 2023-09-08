@@ -20,7 +20,7 @@
                                     <p class="text-muted">TOTAL CLIENTS</p>
                                 </div>
                                 <div class="ms-auto">
-                                    <h2 class="counter text-primary">{{\App\Models\User::get()->count()??null}}</h2>
+                                    <h2 class="counter text-primary">{{$total_user??null}}</h2>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <p class="text-muted">TOTAL TODOS</p>
                                 </div>
                                 <div class="ms-auto">
-                                    <h2 class="counter text-cyan">{{\App\Models\Todo::get()->count()??null}}</h2>
+                                    <h2 class="counter text-cyan">{{$todos??null}}</h2>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     <p class="text-muted">TOTAL TASKS</p>
                                 </div>
                                 <div class="ms-auto">
-                                    <h2 class="counter text-purple">{{\App\Models\Task::get()->count()??null}}</h2>
+                                    <h2 class="counter text-purple">{{$tasks??null}}</h2>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                                     <p class="text-muted">YOUR TODO'S</p>
                                 </div>
                                 <div class="ms-auto">
-                                    <h2 class="counter text-success">{{\App\Models\Todo::where('user_id',Auth::user()->id)->get()->count()??null}}</h2>
+                                    <h2 class="counter text-success">{{$task??null}}</h2>
                                 </div>
                             </div>
                         </div>

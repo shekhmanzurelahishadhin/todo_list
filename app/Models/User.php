@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -17,6 +18,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    public static $data,$image,$imageName,$directory,$imageUrl;
 
     /**
      * The attributes that are mass assignable.
@@ -58,4 +60,29 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public static function update_information($request)
+    {
+        self::$data =Auth::user();
+        self::$data->name = $request->name;
+        self::$data->email = $request->email;
+        if ($request->file('image')){
+            if (file_exists(self::$data->profile_photo_path))
+            {
+                unlink(self::$data->profile_photo_path);
+
+            }
+            self::$data->profile_photo_path = self::saveImage($request);
+        }
+
+        self::$data->save();
+    }
+    private static function saveImage($request){
+        self::$image = $request->file('image');
+        self::$imageName = 'User-'.rand().'.'. self::$image->Extension();
+        self::$directory = 'Uploaded_images/User_image/';
+        self::$imageUrl = self::$directory.self::$imageName;
+        self::$image->move(self::$directory,self::$imageName);
+        return self::$imageUrl;
+    }
 }

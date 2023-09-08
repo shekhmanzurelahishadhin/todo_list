@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,13 @@ Route::middleware([
 //    mark task as complete start
     Route::get('/task-complete/{id}', [TaskController::class, 'complete'])->name('task.complete');
 //    mark task as complete end
+
+//    profile settings start
+    Route::get('/profile-settings', [ProfileController::class, 'index'])->name('profile.settings');
+    Route::post('/profile-update', [ProfileController::class, 'profile_update'])->name('profile.update');
+    Route::post('/password-update', [ProfileController::class, 'update_password'])->name('password.update');
+
+
+//    profile settings end
 
 });

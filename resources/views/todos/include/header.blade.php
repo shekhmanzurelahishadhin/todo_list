@@ -4,7 +4,7 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header text-center" style="background:none !important; color: white">
-            <h3>TODO</h3>
+            <a href="{{route('dashboard')}}" style="color: white"><h3>TODO</h3></a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
@@ -26,9 +26,9 @@
             <ul class="navbar-nav my-lg-0">
                 <!-- ============================================================== -->
                 <li class="nav-item dropdown u-pro">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="hidden-md-down">{{Auth::user()->name??null}} &nbsp;<i class="bi bi-caret-down"></i></span> </a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{isset(Auth::user()->profile_photo_path)?asset(Auth::user()->profile_photo_path):asset('Uploaded_images/User_image/avater_default.jpg')}}" alt="user" class="me-2"><span class="hidden-md-down">{{Auth::user()->name??null}} &nbsp;<i class="bi bi-caret-down"></i></span> </a>
                     <div class="dropdown-menu dropdown-menu-end animated flipInY">
-
+                        <a href="{{route('profile.settings')}}" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                         <!-- text-->
                         <a href="" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logoutForm').submit()"><i class="bi bi-power"></i> Logout</a>
                         <!-- text-->
