@@ -99,6 +99,15 @@
                 <form class="form-horizontal form-material" id="loginform" action="{{ route('register') }}" method="POST">
                     @csrf
                     <h3 class="text-center m-b-20">Sign Up</h3>
+                    @if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="form-group">
                         <div class="col-xs-12">
                             <input class="form-control" type="text" required="required" name="name" placeholder="Name">
@@ -118,6 +127,7 @@
                         <div class="col-xs-12">
                             <input class="form-control" type="password" required="required" name="password_confirmation" placeholder="Confirm Password">
                         </div>
+                        <span class="text-danger"><small>Minimum 8 Character*</small></span>
                     </div>
                     <div class="form-group text-center p-b-20">
                         <div class="col-xs-12">
